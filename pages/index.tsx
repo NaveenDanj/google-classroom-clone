@@ -18,8 +18,8 @@ const Home: NextPage = () => {
 
       <main>
         {/* navbar */}
-        {/* <UnAuthNavbar /> */}
-        <AuthNavbar />
+        <UnAuthNavbar />
+        {/* <AuthNavbar /> */}
 
         {/* body */}
         <Body />
