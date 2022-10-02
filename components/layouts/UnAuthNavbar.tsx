@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Button } from '@chakra-ui/react'
+import Join from './Join'
 
 function UnAuthNavbar() {
     return (
@@ -21,9 +22,7 @@ function UnAuthNavbar() {
                 </div>
 
                 <div className='my-auto'>
-                    <Button className=' my-auto mr-2' colorScheme='teal' variant='outline'>
-                        Join
-                    </Button>
+                    <Join />
                 </div>
 
             </div>
