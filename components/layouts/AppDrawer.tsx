@@ -17,7 +17,8 @@ import {
 } from '@chakra-ui/react'
 
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { BsHouseDoor , BsCalendarWeek , BsArchive , BsGear} from 'react-icons/bs';
+import { BsHouseDoor, BsCalendarWeek, BsArchive, BsGear } from 'react-icons/bs';
+import EnrolledClasses from './EnrolledClasses';
 
 interface prop {
     isOpen: boolean;
@@ -56,6 +57,10 @@ function AppDrawer(props: prop) {
                             <BsCalendarWeek size={20} className='my-auto mr-5' />
                             <h1 className=' text-lg font-medium'>Calendar</h1>
                         </ListItem>
+
+                        <Divider className='mt-2' orientation='horizontal' />
+
+                        <EnrolledClasses />
 
                         <Divider className='mt-2' orientation='horizontal' />
 
