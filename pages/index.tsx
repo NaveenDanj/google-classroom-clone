@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import UnAuthNavbar from '../components/layouts/UnAuthNavbar'
 import Body from '../components/Home/Body'
+import AuthNavbar from '../components/layouts/AuthNavbar'
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +18,8 @@ const Home: NextPage = () => {
 
       <main>
         {/* navbar */}
-        <UnAuthNavbar />
+        {/* <UnAuthNavbar /> */}
+        <AuthNavbar />
 
         {/* body */}
         <Body />
