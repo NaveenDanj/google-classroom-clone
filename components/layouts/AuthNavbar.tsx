@@ -1,9 +1,13 @@
-import React from 'react'
+import React , {useState} from 'react'
 import Image from 'next/image'
 import { HamburgerIcon, AddIcon } from '@chakra-ui/icons'
 import { Button, Avatar } from '@chakra-ui/react'
+import AppDrawer from './AppDrawer'
 
 function AuthNavbar() {
+    
+    const [drawerOpen , setDrawerOpen] = useState(false);
+
     return (
 
         <div className='w-full h-[10vh] p-4 border-b-2'>
@@ -12,9 +16,14 @@ function AuthNavbar() {
 
                 <div className=' flex'>
 
-                    <Button className=' my-auto mr-2' colorScheme='teal' variant='ghost'>
+                    {/* <Button className=' my-auto mr-2' colorScheme='teal' variant='ghost'>
                         <HamburgerIcon w={6} h={6} />
-                    </Button>
+                    </Button> */}
+
+                    <AppDrawer
+                        isOpen={drawerOpen}
+                        handleClose={setDrawerOpen}
+                    />
 
                     <Image
                         className='my-auto'
