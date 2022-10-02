@@ -1,12 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
-import { HamburgerIcon , AddIcon } from '@chakra-ui/icons'
-import { Button , Avatar } from '@chakra-ui/react'
+import { HamburgerIcon, AddIcon } from '@chakra-ui/icons'
+import { Button, Avatar } from '@chakra-ui/react'
 
 function UnAuthNavbar() {
     return (
 
-        <div className='w-full p-4 border-b-2'>
+        <div className='w-full h-[10vh] p-4 border-b-2'>
 
             <div className='flex flex-row justify-between'>
 
