@@ -1,31 +1,26 @@
 import React , {useEffect} from 'react'
 import { Button } from '@chakra-ui/react'
 import { getAuth, signInWithPopup,  GoogleAuthProvider } from "firebase/auth";
-import state from '../../state/';
-import {useRecoilState , useRecoilValue} from 'recoil';
-import { IUser } from '../../Constants';
-import userState from '../../state/userState';
+import {useRecoilState } from 'recoil';
+import {useAuth} from '../../context/AuthUserContext';
 
 
 function Join() {
     
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
-    const [user , setUser] = useRecoilState(state.userState);
-    
-    useEffect(() => {
-        console.log(user);
-    }, [user]);
+    const { authUser , setAuthUser} = useAuth();
 
     const handleGoogleJoin = async() => {
-        let results = await signInWithPopup(auth , provider);
-        setUser({
-            displayName : results.user.displayName,
-            phoneNumber : results.user.phoneNumber,
-            email : results.user.email,
-            photoURL : results.user.photoURL,
-            uid : results.user.uid
-        })
+
+        try{
+            let results = await signInWithPopup(auth , provider);
+            //@ts-ignore
+            setAuthUser(results)
+            console.log(results);
+        }catch(err){
+            console.log(err);
+        }
     };
 
     return (

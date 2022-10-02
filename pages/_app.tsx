@@ -1,28 +1,21 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
-import config  from '../config/FirebaseApp.js'
-import {initializeApp} from "firebase/app";
-
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from 'recoil';
-
+import React, { useEffect } from 'react';
+import { RecoilRoot } from 'recoil';
+import FirebaseApp from '../config/FirebaseApp';
+import { AuthUserProvider } from '../context/AuthUserContext';
+FirebaseApp
 
 function MyApp({ Component, pageProps }: AppProps) {
-
-  initializeApp(config);
-
   return (
-    <RecoilRoot>
+    <AuthUserProvider>
       <ChakraProvider>
-        <Component {...pageProps} />
+        <RecoilRoot>
+          <Component {...pageProps} />
+        </RecoilRoot>
       </ChakraProvider>
-    </RecoilRoot>
+    </AuthUserProvider>
   )
 }
 

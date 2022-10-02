@@ -1,12 +1,19 @@
+import React , {useEffect} from 'react';
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import { Button, ButtonGroup } from '@chakra-ui/react'
 import UnAuthNavbar from '../components/layouts/UnAuthNavbar'
 import Body from '../components/Home/Body'
 import AuthNavbar from '../components/layouts/AuthNavbar'
+import {useAuth} from '../context/AuthUserContext';
 
 const Home: NextPage = () => {
+
+  const { authUser, loading } = useAuth();
+
+  useEffect(() => {
+    
+  },[authUser]);
+
   return (
     <div>
 
@@ -18,12 +25,11 @@ const Home: NextPage = () => {
 
       <main>
         {/* navbar */}
-        <UnAuthNavbar />
-        {/* <AuthNavbar /> */}
+        {!authUser && <UnAuthNavbar /> }
+        {authUser && <AuthNavbar />}
 
         {/* body */}
         <Body />
-
       </main>
 
     </div>

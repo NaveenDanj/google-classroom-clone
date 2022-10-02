@@ -3,10 +3,15 @@ import Image from 'next/image'
 import { HamburgerIcon, AddIcon } from '@chakra-ui/icons'
 import { Button, Avatar } from '@chakra-ui/react'
 import AppDrawer from './AppDrawer'
+import {useAuth} from '../../context/AuthUserContext';
 
 function AuthNavbar() {
     
     const [drawerOpen , setDrawerOpen] = useState(false);
+    const { authUser, loading } = useAuth();
+    console.log("auth user is : " , authUser);
+    //@ts-ignore
+    const avatar = authUser != null ? authUser.photoURL : 'https://bit.ly/dan-abramov'
 
     return (
 
@@ -39,7 +44,7 @@ function AuthNavbar() {
                     <Button className=' my-auto mr-2' colorScheme='teal' variant='ghost'>
                         <AddIcon w={4} h={4} />
                     </Button>
-                    <Avatar className='mt-1 cursor-pointer' size='sm' name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
+                    <Avatar className='mt-1 cursor-pointer' size='sm' name='Dan Abrahmov' src={avatar} />
                 </div>
 
             </div>
