@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Button } from '@chakra-ui/react'
 import { useAuth } from '../../context/AuthUserContext';
+import JoinClassRoom from './JoinClassRoom';
 
 function Body() {
 
@@ -35,7 +36,7 @@ function Body() {
           <h1 className='text-center font-medium text-md'>Add a class to get started</h1>
           <div className='mt-5 flex justify-between flex-row'>
             <Button colorScheme='twitter' variant='ghost'>Create class</Button>
-            <Button colorScheme='twitter' variant='solid'>Join class</Button>
+            <JoinClassRoom />
           </div>
         </div>
       )}
