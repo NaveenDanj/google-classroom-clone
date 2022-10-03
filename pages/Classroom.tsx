@@ -1,6 +1,7 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
+import ClassroomBody from '../components/Classroom/ClassroomBody';
 import ClassroomHeader from '../components/Classroom/ClassroomHeader';
 
 const Classroom:NextPage = () => {
@@ -16,6 +17,7 @@ const Classroom:NextPage = () => {
 
         <div>
             <ClassroomHeader />
+            <ClassroomBody />
         </div>
     
     </div>

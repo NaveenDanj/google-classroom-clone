@@ -34,7 +34,7 @@ const ProfilePopover = ({photoURL , userData}:Prop) => {
                 <PopoverContent>
                     <PopoverBody className='p-5'>
 
-                        <div className='flex justify-center w-full'>
+                        <div className='flex justify-center w-full pb-5'>
                             
                             <div>
                                 <div className='mx-auto w-full'>
