@@ -1,12 +1,13 @@
-import React , {useEffect} from 'react'
+import React from 'react'
 import { Button } from '@chakra-ui/react'
 import { getAuth, signInWithPopup,  GoogleAuthProvider } from "firebase/auth";
-import {useRecoilState } from 'recoil';
 import {useAuth} from '../../context/AuthUserContext';
+import { useRouter } from 'next/router'
 
 
 function Join() {
-    
+
+    const router = useRouter()
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
     const { authUser , setAuthUser} = useAuth();
@@ -17,7 +18,8 @@ function Join() {
             let results = await signInWithPopup(auth , provider);
             //@ts-ignore
             setAuthUser(results)
-            console.log(results);
+            //@ts-ignore
+            router.reload(window.location.pathname)
         }catch(err){
             console.log(err);
         }

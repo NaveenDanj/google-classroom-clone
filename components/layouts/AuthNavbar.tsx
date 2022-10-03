@@ -4,12 +4,12 @@ import { HamburgerIcon, AddIcon } from '@chakra-ui/icons'
 import { Button, Avatar } from '@chakra-ui/react'
 import AppDrawer from './AppDrawer'
 import {useAuth} from '../../context/AuthUserContext';
+import ProfilePopover from './ProfilePopover'
 
 function AuthNavbar() {
     
     const [drawerOpen , setDrawerOpen] = useState(false);
     const { authUser, loading } = useAuth();
-    console.log("auth user is : " , authUser);
     //@ts-ignore
     const avatar = authUser != null ? authUser.photoURL : 'https://bit.ly/dan-abramov'
 
@@ -20,10 +20,6 @@ function AuthNavbar() {
             <div className='flex flex-row justify-between'>
 
                 <div className=' flex'>
-
-                    {/* <Button className=' my-auto mr-2' colorScheme='teal' variant='ghost'>
-                        <HamburgerIcon w={6} h={6} />
-                    </Button> */}
 
                     <AppDrawer
                         isOpen={drawerOpen}
@@ -44,7 +40,11 @@ function AuthNavbar() {
                     <Button className=' my-auto mr-2' colorScheme='teal' variant='ghost'>
                         <AddIcon w={4} h={4} />
                     </Button>
-                    <Avatar className='mt-1 cursor-pointer' size='sm' name='Dan Abrahmov' src={avatar} />
+
+                    <ProfilePopover
+                        photoURL={avatar}
+                        userData={authUser}
+                    />
                 </div>
 
             </div>
