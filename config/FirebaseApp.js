@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
@@ -15,4 +16,9 @@ const firebaseConfig = {
 
 // if a Firebase instance doesn't exist, create one
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+export {
+  db
+}
+
 export default app;
