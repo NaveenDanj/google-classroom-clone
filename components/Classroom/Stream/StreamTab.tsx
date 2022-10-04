@@ -3,6 +3,7 @@ import React from 'react'
 import { BsPencil, BsGear } from 'react-icons/bs';
 import Image from 'next/image'
 import AddAnnounce from './AddAnnounce';
+import UserPosts from './Announcements/UserPosts';
 
 function StreamTab() {
     return (
@@ -71,6 +72,10 @@ function StreamTab() {
                     <div className='ml-2 md:w-full '>
 
                         <AddAnnounce />
+                        
+                        <div className='mt-3'></div>
+
+                        <UserPosts />
 
                         <Box className='p-2 mt-5 flex flex-row' borderWidth='1px' borderRadius='lg' overflow='hidden'>
 
@@ -94,6 +99,7 @@ function StreamTab() {
                             </div>
 
                         </Box>
+                    
                     </div>
 
                 </div>
