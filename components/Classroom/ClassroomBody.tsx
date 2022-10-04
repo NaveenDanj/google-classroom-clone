@@ -1,5 +1,6 @@
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from '@chakra-ui/react'
 import React from 'react'
+import StreamTab from './Stream/StreamTab'
 
 function ClassroomBody() {
     return (
@@ -31,9 +32,9 @@ function ClassroomBody() {
                     
                     </div>
 
-                    <TabPanels className='bg-red-500 w-full'>
+                    <TabPanels className='w-full'>
                         <TabPanel>
-                            <p>one!</p>
+                            <StreamTab />
                         </TabPanel>
                         <TabPanel>
                             <p>two!</p>

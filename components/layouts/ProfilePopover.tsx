@@ -16,7 +16,7 @@ const ProfilePopover = ({photoURL , userData}:Prop) => {
         const auth = getAuth();
         signOut(auth).then(() => {
             //@ts-ignore
-            // router.reload(window.location.pathname)
+            router.replace('/')
         }).catch((error) => {
         // An error happened.
         });

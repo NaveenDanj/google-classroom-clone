@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import Image from 'next/image'
-import { HamburgerIcon, AddIcon } from '@chakra-ui/icons'
 import { BsGear } from 'react-icons/bs';
 import { Button} from '@chakra-ui/react'
 import AppDrawer from '../layouts/AppDrawer'
