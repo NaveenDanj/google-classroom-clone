@@ -2,6 +2,7 @@ import { Box, Button } from '@chakra-ui/react'
 import React from 'react'
 import { BsPencil, BsGear } from 'react-icons/bs';
 import Image from 'next/image'
+import AddAnnounce from './AddAnnounce';
 
 function StreamTab() {
     return (
@@ -28,7 +29,7 @@ function StreamTab() {
 
                 <div className='w-full flex-col md:flex md:flex-row mt-5'>
 
-                    <div className='shrink-0 mt-1 md:w-48 '>
+                    <div className='shrink-0 mt-1 mr-4 md:w-48 '>
                         <Box className='p-2' borderWidth='1px' borderRadius='lg' overflow='hidden'>
 
                             <div className='flex mt-2 flex-row w-full justify-between'>
@@ -68,7 +69,10 @@ function StreamTab() {
                     </div>
 
                     <div className='ml-2 md:w-full '>
-                        <Box className='p-2 mt-1 flex flex-row' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+
+                        <AddAnnounce />
+
+                        <Box className='p-2 mt-5 flex flex-row' borderWidth='1px' borderRadius='lg' overflow='hidden'>
 
                             <Image
                                 alt="Picture of the author"
