@@ -4,7 +4,7 @@ import { BsFillFileEarmarkTextFill, BsThreeDotsVertical } from 'react-icons/bs'
 
 const PeopleCard = () => {
     return (
-        <Box className='p-2 mt-2  pb-3' borderRadius='lg' overflow='hidden'>
+        <Box className='p-2 mt-2  pb-3 border-b-2' borderRadius='lg' overflow='hidden'>
 
             <div className='flex flex-row w-full justify-between cursor-pointer'>
 

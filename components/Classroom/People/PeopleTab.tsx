@@ -15,11 +15,11 @@ const PeopleTab = () => {
                 <StudentPeopleView />
             </div>
 
-            <EmptyList
+            {/* <EmptyList
                 path='/img/people.gif'
                 title='Add students to this class'
                 subtitle='Invite people to your classroom to get started.'
-            />
+            /> */}
         </div>
     
     </div>

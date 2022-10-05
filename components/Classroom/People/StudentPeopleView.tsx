@@ -6,7 +6,7 @@ import PeopleCard from './PeopleCard'
 const StudentPeopleView = () => {
     return (
         
-        <div className='w-full mt-5 '>
+        <div className='w-full mt-1'>
             <div className='p-5 flex border-b-2 border-orange-600 flex-row justify-between '>
                 <div>
                     <h1 className=' text-2xl text-orange-600 '>Classmates</h1>
@@ -17,6 +17,12 @@ const StudentPeopleView = () => {
             </div>
 
             <div>
+                <PeopleCard />
+                <PeopleCard />
+                <PeopleCard />
+                <PeopleCard />
+                <PeopleCard />
+                <PeopleCard />
                 <PeopleCard />
             </div>
 
