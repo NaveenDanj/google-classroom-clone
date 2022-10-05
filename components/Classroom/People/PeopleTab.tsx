@@ -1,5 +1,6 @@
 import React from 'react'
 import EmptyList from '../../Global/EmptyList'
+import StudentPeopleView from './StudentPeopleView'
 import TeacherPeopleView from './TeacherPeopleView'
 
 const PeopleTab = () => {
@@ -9,6 +10,10 @@ const PeopleTab = () => {
         <div className=' w-full sm:w-3/4 md:w-2/3 '>
 
             <TeacherPeopleView />
+
+            <div className=' mt-16 mb-3'>
+                <StudentPeopleView />
+            </div>
 
             <EmptyList
                 path='/img/people.gif'
