@@ -4,6 +4,7 @@ import { BsPencil, BsGear } from 'react-icons/bs';
 import Image from 'next/image'
 import AddAnnounce from './AddAnnounce';
 import UserPosts from './Announcements/UserPosts';
+import NewAssignment from './Announcements/NewAssignment';
 
 function StreamTab() {
     return (
@@ -76,6 +77,8 @@ function StreamTab() {
                         <div className='mt-3'></div>
 
                         <UserPosts />
+                        <div className='mt-5'></div>
+                        <NewAssignment />
 
                         <Box className='p-2 mt-5 flex flex-row' borderWidth='1px' borderRadius='lg' overflow='hidden'>
 
