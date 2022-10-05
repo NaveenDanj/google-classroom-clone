@@ -1,6 +1,7 @@
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from '@chakra-ui/react'
 import React from 'react'
 import ClassworkTab from './Classwork/ClassworkTab'
+import GradeTab from './Grades/GradeTab'
 import PeopleTab from './People/PeopleTab'
 import StreamTab from './Stream/StreamTab'
 
@@ -45,7 +46,7 @@ function ClassroomBody() {
                             <PeopleTab />
                         </TabPanel>
                         <TabPanel>
-                            <p>three!</p>
+                            <GradeTab />
                         </TabPanel>
                     </TabPanels>
                     
