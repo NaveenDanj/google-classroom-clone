@@ -2,12 +2,13 @@ import { Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr } 
 import React from 'react'
 import ClassroomItem from '../Classwork/ClassroomItem'
 import ClassworkHeaderTeacher from '../Classwork/ClassworkHeaderTeacher'
+import GradesHeader from './GradesHeader'
 
 const GradeTab = () => {
     return (
         <div className='flex flex-row justify-center'>
             <div className=' w-full sm:w-3/4 md:w-2/3 '>
-                <ClassworkHeaderTeacher />
+                <GradesHeader />
                 {/* <EmptyList
                     path='/img/notfound.gif'
                     title='This is where you’ll assign work'
