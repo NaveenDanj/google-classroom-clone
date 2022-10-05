@@ -1,13 +1,14 @@
 import React from 'react'
 import EmptyList from '../../Global/EmptyList'
+import TeacherPeopleView from './TeacherPeopleView'
 
 const PeopleTab = () => {
   return (
     <div className='flex flex-row justify-center'>
         
         <div className=' w-full sm:w-3/4 md:w-2/3 '>
-            
 
+            <TeacherPeopleView />
 
             <EmptyList
                 path='/img/people.gif'
