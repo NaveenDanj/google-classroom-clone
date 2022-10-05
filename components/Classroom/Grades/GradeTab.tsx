@@ -1,8 +1,7 @@
-import { Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr } from '@chakra-ui/react'
 import React from 'react'
-import ClassroomItem from '../Classwork/ClassroomItem'
-import ClassworkHeaderTeacher from '../Classwork/ClassworkHeaderTeacher'
+import EmptyList from '../../Global/EmptyList'
 import GradesHeader from './GradesHeader'
+import GradesItem from './GradesItem'
 
 const GradeTab = () => {
     return (
@@ -15,18 +14,7 @@ const GradeTab = () => {
                     subtitle='You can add assignments and other work for the class, then organize it into topics'
                 /> */}
                 <div className='px-1 py-2'>
-                    <ClassroomItem />
-                    <ClassroomItem />
-                    <ClassroomItem />
-                    <ClassroomItem />
-                    <ClassroomItem />
-                    <ClassroomItem />
-                    <ClassroomItem />
-                    <ClassroomItem />
-                    <ClassroomItem />
-                    <ClassroomItem />
-                    <ClassroomItem />
-                    <ClassroomItem />
+                    <GradesItem />
                 </div>
             </div>
         </div>
