@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import { BsFillFileEarmarkTextFill, BsPeople , BsCaretRight } from 'react-icons/bs'
 import UserComment from '../../Global/UserComment'
+import PrivateComment from './PrivateComment'
 import YourWork from './YourWork'
 
 const ViewAssignmentBody = () => {
@@ -115,6 +116,7 @@ const ViewAssignmentBody = () => {
 
                 <div className='w-full lg:w-72'>
                     <YourWork />
+                    <PrivateComment />
                 </div>
 
 
