@@ -1,6 +1,7 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
+import ClassCard from '../components/Classes/ClassCard'
 import ClassesHeader from '../components/Classes/ClassesHeader'
 import ClassroomHeader from '../components/Classroom/ClassroomHeader'
 
@@ -19,7 +20,22 @@ const Classes: NextPage = () => {
 
                 <div className='p-5'>
                     <ClassesHeader />
+
+                    <div className='mt-5'>
+
+                        <div className="grid grid-flow-row auto-rows-max  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+                            <ClassCard />
+                            <ClassCard />
+                            <ClassCard />
+                            <ClassCard />
+                            
+                        </div>
+
+
+                    </div>
+
                 </div>
+
 
             </div>
 
