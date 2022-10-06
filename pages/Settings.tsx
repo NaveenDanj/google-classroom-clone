@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
 import ClassroomHeader from '../components/Classroom/ClassroomHeader'
+import { SettingsBody } from '../components/Settings/SettingsBody'
 
 const Settings:NextPage = () => {
     return (
@@ -15,6 +16,7 @@ const Settings:NextPage = () => {
 
             <div>
                 <ClassroomHeader />
+                <SettingsBody />
             </div>
         </div>
     )
