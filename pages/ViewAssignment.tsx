@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import ClassroomHeader from '../components/Classroom/ClassroomHeader'
+import ViewAssignmentBody from '../components/Classroom/ViewAssignment/ViewAssignmentBody'
 
 const ViewAssignment = () => {
     return (
@@ -13,6 +14,7 @@ const ViewAssignment = () => {
 
             <div>
                 <ClassroomHeader />
+                <ViewAssignmentBody />
             </div>
         </div>
 
