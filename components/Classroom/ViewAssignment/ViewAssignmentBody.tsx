@@ -1,15 +1,16 @@
-import { Avatar, Box, Button, Divider, Input, InputGroup, InputRightElement } from '@chakra-ui/react'
+import { Avatar, Box, Button, Input, InputGroup, InputRightElement } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
 import { BsFillFileEarmarkTextFill, BsPeople , BsCaretRight } from 'react-icons/bs'
 import UserComment from '../../Global/UserComment'
+import YourWork from './YourWork'
 
 const ViewAssignmentBody = () => {
     return (
         <div className='flex mt-5 flex-row justify-center'>
             <div className='px-1 w-full flex flex-col lg:flex-row sm:w-4/5 md:w-5/6 '>
 
-                <div className='flex-1'>
+                <div className='flex-1 mx-3'>
 
                     <div className='flex flex-row justify-between w-full'>
 
@@ -113,7 +114,7 @@ const ViewAssignmentBody = () => {
                 </div>
 
                 <div className='w-full lg:w-72'>
-
+                    <YourWork />
                 </div>
 
 
