@@ -66,6 +66,14 @@ const NotificationSettings = () => {
                         </div>
                         <Switch className='my-auto' size='md' />
                     </div>
+
+                    <div className='flex flex-row justify-between w-full mt-2'>
+                        <div className='flex flex-row mt-3 '>
+                            <Avatar size={'sm'} className='my-auto mr-3' />
+                            <h2 className='my-auto'><span className='font-medium'>test</span> TEST</h2>
+                        </div>
+                        <Switch className='my-auto' size='md' />
+                    </div>
                 
                 </div>
 
