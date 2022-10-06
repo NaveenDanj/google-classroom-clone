@@ -1,7 +1,7 @@
-import { Avatar, Box, Button, Input, InputGroup, InputRightElement } from '@chakra-ui/react'
+import { Avatar, Box, Button, IconButton, Input, InputGroup, InputRightElement } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
-import { BsFillFileEarmarkTextFill, BsPeople , BsCaretRight } from 'react-icons/bs'
+import { BsFillFileEarmarkTextFill, BsPeople , BsCaretRight, BsThreeDotsVertical } from 'react-icons/bs'
 import UserComment from '../../Global/UserComment'
 import Attachments from './Attachments'
 import CommentSection from './CommentSection'
@@ -30,6 +30,8 @@ const ViewAssignmentBody = () => {
 
 
                         </div>
+
+                        <IconButton className='my-auto' size={'sm'} aria-label='Search database' icon={<BsThreeDotsVertical />} />
 
 
                     </div>
