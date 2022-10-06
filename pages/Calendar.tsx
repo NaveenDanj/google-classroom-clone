@@ -1,12 +1,8 @@
-import { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
-import ClassCard from '../components/Classes/ClassCard'
-import ClassesBody from '../components/Classes/ClassesBody'
-import ClassesHeader from '../components/Classes/ClassesHeader'
 import ClassroomHeader from '../components/Classroom/ClassroomHeader'
 
-const Classes: NextPage = () => {
+const Calendar = () => {
     return (
         <div>
 
@@ -18,16 +14,10 @@ const Classes: NextPage = () => {
 
             <div>
                 <ClassroomHeader />
-
-                <div className='p-5'>
-                    <ClassesHeader />
-                    <ClassesBody />
-                </div>
-
             </div>
 
         </div>
     )
 }
 
-export default Classes
+export default Calendar
