@@ -2,6 +2,7 @@ import { Avatar, Box, Button, Divider, Input, InputGroup, InputRightElement } fr
 import Image from 'next/image'
 import React from 'react'
 import { BsFillFileEarmarkTextFill, BsPeople , BsCaretRight } from 'react-icons/bs'
+import UserComment from '../../Global/UserComment'
 
 const ViewAssignmentBody = () => {
     return (
@@ -78,6 +79,14 @@ const ViewAssignmentBody = () => {
                         <div className='flex flex-row'>
                             <BsPeople className='my-auto text-xl ' />
                             <h2 className='my-auto ml-2 font-medium'>Class comments</h2>
+                        </div>
+
+                        <div className='my-4 pb-3 border-b-2'>
+                            <UserComment />
+                            <UserComment />
+                            <UserComment />
+                            <UserComment />
+                            <UserComment />
                         </div>
 
                         <div className='mt-5 flex flex-row'>
