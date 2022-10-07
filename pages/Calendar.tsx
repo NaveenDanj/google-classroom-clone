@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
+import CalendarBody from '../components/Calendar/CalendarBody'
 import ClassroomHeader from '../components/Classroom/ClassroomHeader'
 
 const Calendar = () => {
@@ -14,6 +15,10 @@ const Calendar = () => {
 
             <div>
                 <ClassroomHeader />
+                <div className='p-5 h-[85vh] '>
+                    <CalendarBody />
+
+                </div>
             </div>
 
         </div>
