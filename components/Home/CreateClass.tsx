@@ -1,18 +1,20 @@
 import { Alert, AlertDescription, AlertIcon, AlertTitle, Button, Input, Modal, ModalContent, ModalFooter, useDisclosure } from '@chakra-ui/react'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useForm } from "react-hook-form";
 import { addDoc, collection} from "firebase/firestore";
 import { db } from '../../config/FirebaseApp';
 import { useAuth } from '../../context/AuthUserContext';
+import EventLoading from '../Global/EventLoading';
 
 
 function CreateClass() {
     const { authUser } = useAuth();
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [error , setError] = useState<string>('');
-    const { register, handleSubmit } = useForm();
+    const [loading , setLoading] = useState<boolean>(false);
+    const { register, handleSubmit , reset } = useForm();
     const submitButton = useRef();
-
+    const resetButton = useRef();
 
     const onSubmit = async (data: any) => {
 
@@ -20,16 +22,24 @@ function CreateClass() {
         
         try {
             data.owner = authUser.uid;
+            setLoading(true);
             let res = await addDoc(collection(db, "classes"), data);
-            console.log(res);
-
+            setLoading(false);
+            reset();
         } catch (err:any) {
             console.log(err);
             setError(err);
+            setLoading(false);
         }
         
     };
 
+    const handleClose = () => {
+        // @ts-ignore
+        reset();
+        onClose();
+    }
+    
     const handleSizeClick = () => {
         onOpen()
     }
@@ -44,10 +54,11 @@ function CreateClass() {
                 Create class
             </Button>
 
-            <Modal isCentered={true} onClose={onClose} size={'lg'} isOpen={isOpen}>
+            <Modal isCentered={true} onClose={handleClose} size={'lg'} isOpen={isOpen}>
                 <ModalContent>
 
                     <div className='mt-0'>
+                        {/* @ts-ignore */}
                         <form onSubmit={handleSubmit(onSubmit)} className='p-5'>
                             <h2 className='font-medium '>Create class</h2>
 
@@ -83,18 +94,25 @@ function CreateClass() {
                             />
                             {/* @ts-ignore */}
                             <input ref={submitButton} style={{ display: 'hidden' }} type={'submit'} value='' />
+                            {/* @ts-ignore */}
+                            <input ref={resetButton} style={{ display: 'hidden' }} type={'reset'} value='' />
 
                         </form>
                     </div>
 
                     <ModalFooter>
-                        <Button variant={'ghost'} className='mr-2' onClick={onClose}>Close</Button>
+                        <Button variant={'ghost'} className='mr-2' onClick={handleClose}>Close</Button>
                         <Button
+                            className='flex'
                             colorScheme={'twitter'}
+                            disabled={loading}
                             //@ts-ignore
                             onClick={() => submitButton.current.click()}
-                        >
-                            Create
+                        >   
+                            <div className='my-auto'>
+                                {loading && <EventLoading />}
+                            </div>
+                            <span className='ml-2 my-auto'>Create</span>
                         </Button>
                     </ModalFooter>
 

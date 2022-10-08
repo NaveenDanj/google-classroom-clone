@@ -6,10 +6,10 @@ const LoadingScreen = () => {
     <div className='w-full h-screen flex justify-center items-center'>
         <div>
             <Image
-                width={300}
-                height={300}
-                alt='loading'
-                src={'/img/loading.gif'}
+              width={300}
+              height={300}
+              alt='loading'
+              src={'/img/loading.gif'}
             />
             <h1 className='text-center text-2xl '>Please wait...</h1>
         </div>
