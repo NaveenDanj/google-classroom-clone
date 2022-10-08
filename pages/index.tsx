@@ -5,6 +5,7 @@ import UnAuthNavbar from '../components/layouts/UnAuthNavbar'
 import Body from '../components/Home/Body'
 import AuthNavbar from '../components/layouts/AuthNavbar'
 import { useAuth } from '../context/AuthUserContext';
+import LoadingScreen from '../components/Global/LoadingScreen';
 
 const Home: NextPage = () => {
 
@@ -15,7 +16,7 @@ const Home: NextPage = () => {
   }, [authUser]);
 
   if (loading) {
-    return <h1>loading...</h1>
+    return <LoadingScreen />
   } else {
 
     return (
