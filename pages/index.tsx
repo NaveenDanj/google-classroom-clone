@@ -11,10 +11,6 @@ const Home: NextPage = () => {
 
   const { authUser, loading } = useAuth();
 
-  useEffect(() => {
-
-  }, [authUser]);
-
   if (loading) {
     return <LoadingScreen />
   } else {
