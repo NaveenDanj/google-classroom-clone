@@ -4,6 +4,7 @@ import { Button} from '@chakra-ui/react'
 import AppDrawer from '../layouts/AppDrawer'
 import { useAuth } from '../../context/AuthUserContext';
 import ProfilePopover from '../layouts/ProfilePopover'
+import ClassSettings from '../layouts/ClassSettings';
 
 function ClassroomHeader() {
 
@@ -28,14 +29,13 @@ function ClassroomHeader() {
                     </div>
 
                     <div className='my-auto'>
-                        <h1 className='font-medium text-lg ml-2 my-auto'>Classroom name</h1>
+                        <h1 className='font-medium text-lg ml-2 my-auto'>Classroom names</h1>
                     </div>
                 </div>
 
                 <div className='my-auto'>
-                    <Button className=' my-auto mr-2' colorScheme='teal' variant='ghost'>
-                        <BsGear />
-                    </Button>
+                    
+                    <ClassSettings />
 
                     <ProfilePopover
                         photoURL={avatar}

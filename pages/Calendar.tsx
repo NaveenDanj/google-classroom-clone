@@ -17,7 +17,6 @@ const Calendar = () => {
                 <ClassroomHeader />
                 <div className='p-5 h-[85vh] '>
                     <CalendarBody />
-
                 </div>
             </div>
 

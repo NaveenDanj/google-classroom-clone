@@ -2,23 +2,17 @@ import React from 'react'
 import {
     List,
     ListItem,
-    ListIcon,
-    OrderedList,
-    UnorderedList,
     Divider,
     Button,
     Drawer,
-    DrawerBody,
-    DrawerFooter,
-    DrawerHeader,
     DrawerOverlay,
-    DrawerContent,
-    DrawerCloseButton,
+    DrawerContent
 } from '@chakra-ui/react'
 
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { BsHouseDoor, BsCalendarWeek, BsArchive, BsGear } from 'react-icons/bs';
 import EnrolledClasses from './EnrolledClasses';
+import { useRouter } from 'next/router';
 
 interface prop {
     isOpen: boolean;
@@ -28,6 +22,11 @@ interface prop {
 function AppDrawer(props: prop) {
 
     const { isOpen, handleClose } = props;
+    const router = useRouter();
+
+    const handleNavigate = (route: string): void => {
+        router.push('/' + route);
+    }
 
     return (
         <>
@@ -48,12 +47,12 @@ function AppDrawer(props: prop) {
 
                     <List spacing={1}>
 
-                        <ListItem className=' cursor-pointer flex flex-row bg-slate-300 p-4 rounded-r-[40px]'>
+                        <ListItem onClick={() => handleNavigate('Classes')} className=' cursor-pointer flex flex-row bg-slate-300 p-4 rounded-r-[40px]'>
                             <BsHouseDoor size={20} className='my-auto mr-5' />
                             <h1 className=' text-lg font-medium'>Classes</h1>
                         </ListItem>
 
-                        <ListItem className=' cursor-pointer flex flex-row hover:bg-slate-300 p-4 rounded-r-[40px]'>
+                        <ListItem onClick={() => handleNavigate('Calendar')} className=' cursor-pointer flex flex-row hover:bg-slate-300 p-4 rounded-r-[40px]'>
                             <BsCalendarWeek size={20} className='my-auto mr-5' />
                             <h1 className=' text-lg font-medium'>Calendar</h1>
                         </ListItem>
@@ -64,12 +63,12 @@ function AppDrawer(props: prop) {
 
                         <Divider className='mt-2' orientation='horizontal' />
 
-                        <ListItem className=' cursor-pointer flex flex-row hover:bg-slate-300 p-4 rounded-r-[40px]'>
+                        <ListItem onClick={() => handleNavigate('ArchivedClasses')} className=' cursor-pointer flex flex-row hover:bg-slate-300 p-4 rounded-r-[40px]'>
                             <BsArchive size={20} className='my-auto mr-5' />
                             <h1 className=' text-lg font-medium'>Archived classes</h1>
                         </ListItem>
 
-                        <ListItem className=' cursor-pointer flex flex-row hover:bg-slate-300 p-4 rounded-r-[40px]'>
+                        <ListItem onClick={() => handleNavigate('Settings')} className=' cursor-pointer flex flex-row hover:bg-slate-300 p-4 rounded-r-[40px]'>
                             <BsGear size={20} className='my-auto mr-5' />
                             <h1 className=' text-lg font-medium'>Settings</h1>
                         </ListItem>
