@@ -19,9 +19,6 @@ function CreateClass() {
         uid : user.uid
     }
 
-    // useEffect(() => {
-
-    // } ,[isOpen])
 
     const handleSizeClick = () => {
         onOpen()
